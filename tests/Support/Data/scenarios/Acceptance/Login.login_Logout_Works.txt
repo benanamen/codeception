@@ -1,0 +1,10 @@
+I WANT TO LOGIN LOGOUT WORKS
+
+I am on page '/' 
+I click 'Login' 
+I see in title 'Perfect App Starter' 
+I see current url equals '/login' 
+I see 'The Dashboard' 
+I click 'Log Out' 
+I see 'You have been successfully logged out.'
+

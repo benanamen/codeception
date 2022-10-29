@@ -1,0 +1,10 @@
+I WANT TO FRONTPAGE WORKS
+
+I am on page '/' 
+I see 'Login' 
+I see 'Forgot Password' 
+I see 'Register' 
+I see 'User API' 
+I see 'About' 
+I see 'Contact'
+

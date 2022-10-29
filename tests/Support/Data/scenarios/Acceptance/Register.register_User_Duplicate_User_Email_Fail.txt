@@ -1,0 +1,9 @@
+I WANT TO REGISTER USER DUPLICATE USER EMAIL FAIL
+
+I am on page '/' 
+I click 'Register' 
+I can see in current url '/register' 
+I see current url equals '/register' 
+I see 'Registration Failed' 
+I see 'Invalid Username or Email'
+
