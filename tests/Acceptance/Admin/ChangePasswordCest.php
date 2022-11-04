@@ -29,7 +29,7 @@ class ChangePasswordCest
         $I->seeCurrentUrlEquals('/change-password');
     }
 
-    public function WhatISee(AcceptanceTester $I)
+    public function whatISee(AcceptanceTester $I)
     {
         $I->expect('to see a H3 title that says "Change Password"');
         $I->see('Change Password', 'H3');

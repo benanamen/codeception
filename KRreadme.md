@@ -69,6 +69,12 @@ php vendor/bin/codecept run Acceptance DevTestingCest --html
 
 ### Run Specific Method
 
+* Add User Empty Field Method
+```shell
+php vendor/bin/codecept run Acceptance Admin:AddUserCest:blankFields --html
+```
+
+
 * Login Empty Field Method
 ```shell
 php vendor/bin/codecept run Acceptance LoginCest:loginEmptyFields

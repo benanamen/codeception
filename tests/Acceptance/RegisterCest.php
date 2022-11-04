@@ -14,7 +14,7 @@ class RegisterCest
         $I->amOnPage('/register');
     }
 
-    public function WhatISee(AcceptanceTester $I)
+    public function whatISee(AcceptanceTester $I)
     {
         $I->seeInTitle('Perfect App Starter');
 

@@ -13,7 +13,7 @@ class LoginCest
         $I->amOnPage('/login');
     }
 
-    public function WhatISee(AcceptanceTester $I)
+    public function whatISee(AcceptanceTester $I)
     {
         $I->seeInTitle('Perfect App Starter');
 
@@ -29,6 +29,9 @@ class LoginCest
         $I->expect('to see a label that says "Username');
         $I->seeElement(Locator::contains('label', 'Username'));
         $I->seeElement('label', ['for' => 'username']);
+
+        $I->expect('to see a a form input');
+        $I->seeElement('input', ['name' => 'username']);
 
         /*
          * Check Password Components
