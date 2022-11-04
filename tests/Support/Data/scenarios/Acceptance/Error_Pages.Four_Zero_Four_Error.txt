@@ -1,0 +1,6 @@
+I WANT TO FOUR ZERO FOUR ERROR
+
+I am on page '/NonExistPage' 
+I see page not found "" 
+I see response code is "404"
+

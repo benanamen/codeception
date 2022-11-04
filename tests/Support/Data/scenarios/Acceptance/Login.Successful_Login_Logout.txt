@@ -1,0 +1,11 @@
+I WANT TO SUCCESSFUL LOGIN LOGOUT
+
+I am on page '/login' 
+I am going to 'submit login form with a correct username & password field' 
+I expect 'to see the text "Dashboard' 
+I see 'The Dashboard' 
+I expect 'to see "Logout " and click it to logout' 
+I click 'Log Out' 
+I expect 'to see "You have been successfully logged out.' 
+I see 'You have been successfully logged out.'
+

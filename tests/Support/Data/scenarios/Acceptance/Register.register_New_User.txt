@@ -1,0 +1,10 @@
+I WANT TO REGISTER NEW USER
+
+I am on page '/register' 
+I am going to 'submit register form with correct data' 
+I expect 'data to be entered into database' 
+I expect 'to see a red error message "Registration Failed" & "Invalid Username or Email" if the username or password is already in the db' 
+I expect 'to see the message "Email confirmation instructions have been sent. Check your spam folder.' 
+I see 'Email confirmation instructions have been sent. Check your spam folder.' 
+I expect 'email sent to registered email with link to activate account'
+

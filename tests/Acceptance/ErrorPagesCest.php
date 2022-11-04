@@ -7,12 +7,8 @@ use Tests\Support\AcceptanceTester;
 
 class ErrorPagesCest
 {
-    public function _before(AcceptanceTester $I)
-    {
-    }
-
     // tests
-    public function tryToTest(AcceptanceTester $I)
+    public function FourZeroFourError(AcceptanceTester $I)
     {
         $I->amOnPage('/NonExistPage');
         $I->seePageNotFound();

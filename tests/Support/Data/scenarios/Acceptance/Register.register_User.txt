@@ -1,6 +1,0 @@
-I WANT TO REGISTER USER
-
-I am on page '/' 
-I click 'Register' 
-I see 'Email confirmation instructions have been sent. Check your spam folder.'
-

@@ -7,7 +7,7 @@ use Tests\Support\AcceptanceTester;
 
 class FrontPageCest
 {
-    public function frontpageWorks(AcceptanceTester $I)
+    public function frontpage(AcceptanceTester $I)
     {
         $I->amOnPage('/');
         $I->see('Login');

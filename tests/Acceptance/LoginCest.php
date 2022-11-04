@@ -3,84 +3,95 @@
 
 namespace Tests\Acceptance;
 
+use Codeception\Util\Locator;
 use Tests\Support\AcceptanceTester;
 
 class LoginCest
 {
     public function _before(AcceptanceTester $I)
     {
-        $I->amOnPage('/');
-        $I->click('Login');
+        $I->amOnPage('/login');
+    }
+
+    public function WhatISee(AcceptanceTester $I)
+    {
         $I->seeInTitle('Perfect App Starter');
+
+        $I->expect('to see a Url "/login"');
         $I->seeCurrentUrlEquals('/login');
 
-        $I->expect('to see a H3 title');
+        $I->expect('to see a H3 title that says "Login"');
         $I->see('Login', 'H3');
 
-        $I->expect('to see a Username Label');
-        //TODO: Find out how to do isee form label xx
-
-        $I->expect('to see a Password Label');
-        //TODO: Find out how to do isee form label xx
-
-
         /*
-         * Check Username Components
-         */
-        $I->expect('to see a Username Form Field');
-        $I->seeElement('input', ['name' => 'username']);
-        $I->expect('to see a required in code for Username Form Field'); //TODO: Find out how to see required in code
-
+        * Check Username Components
+        * */
+        $I->expect('to see a label that says "Username');
+        $I->seeElement(Locator::contains('label', 'Username'));
+        $I->seeElement('label', ['for' => 'username']);
 
         /*
          * Check Password Components
          * */
-        $I->expect('to see a Password Form Field');
+        $I->expect('to see a label that says "Password');
+        $I->seeElement(Locator::contains('label', 'Password'));
+        $I->seeElement('label', ['for' => 'password']);
+
+        $I->expect('to see a a form input');
         $I->seeElement('input', ['name' => 'password']);
 
         /*
          * Check Links
          */
-
-        $I->expect('Login Button Link');
+        $I->expect('to see Login Button Link');
         $I->see('Login', '.btn-primary');
 
-        $I->expect('Register Button Link');
+        $I->expect('to see Register Button Link');
         $I->see('Register', '.btn-secondary');
 
-        $I->expect('Password Link');
+        $I->expect('to see Forgot Password Link');
         $I->see('Forgot Password', '.btn-link');
+        $I->seeLink('Forgot Password', 'forgot');
     }
 
-    public function loginLogoutWorks(AcceptanceTester $I)
+    public function SuccessfulLoginLogout(AcceptanceTester $I)
     {
+        $I->amGoingTo('submit login form with a correct username & password field');
         $I->submitForm('#login', [
             'username' => 'user',
             'password' => 'pass',
         ]);
+
+        $I->expect('to see the text "Dashboard"');
         $I->see('The Dashboard');
+
+        $I->expect('to see "Logout " and click it to logout');
         $I->click('Log Out');
+
+        $I->expect('to see "You have been successfully logged out."');
         $I->see('You have been successfully logged out.');
     }
 
-    public function loginInvalidFails(AcceptanceTester $I)
+    public function LoginWithWrongCredentialsFailure(AcceptanceTester $I)
     {
         $I->amGoingTo('submit login form with incorrect username & password field');
-        $I->expect('to see a red error message "Invalid Login"');
         $I->submitForm('#login', [
             'username' => 'user',
             'password' => 'xxx',
         ]);
+
+        $I->expect('to see a red error message "Invalid Login"');
         $I->see('Invalid Login');
     }
 
-    public function loginAllEmptyFields(AcceptanceTester $I)
+    public function loginWithEmptyUsernameAndEmptyPasswordFailure(AcceptanceTester $I)
     {
+        $I->amGoingTo('submit login form with empty username & empty password field');
         $I->submitForm('#login', [
             'username' => '',
             'password' => '',
         ]);
-        $I->amGoingTo('submit login form with empty username & password field');
+
         $I->expect('to see a red error message "Username Required" & "Password Required"');
         $I->see('Username Required', '.danger');
         $I->see('Password Required', '.danger');
@@ -90,14 +101,14 @@ class LoginCest
         $I->see('Password Required', '.invalid-feedback');
     }
 
-    public function loginEmptyUsername(AcceptanceTester $I)
+    public function loginWithEmptyUsernameAndRandomPassword(AcceptanceTester $I)
     {
-        /* Testing Blank Username */
+        $I->amGoingTo('submit login form with empty username & a random password');
         $I->submitForm('#login', [
             'username' => '',
             'password' => 'RandomPass',
         ]);
-        $I->amGoingTo('submit login form with empty username & random password');
+
         $I->expect('to see a red error message "Username Required"');
         $I->see('Username Required', '.danger');
 
@@ -105,10 +116,9 @@ class LoginCest
         $I->see('Username Required', '.invalid-feedback');
     }
 
-    public function loginEmptyPassword(AcceptanceTester $I)
+    public function loginWithEmptyPasswordAndRandomUsername(AcceptanceTester $I)
     {
-        /* Testing Blank Password */
-        $I->amGoingTo('submit login form with empty password & random username');
+        $I->amGoingTo('submit login form with empty password & a random username');
         $I->submitForm('#login', [
             'username' => 'Random Username',
             'password' => '',
@@ -121,20 +131,20 @@ class LoginCest
         $I->see('Password Required', '.invalid-feedback');
     }
 
-    public function loginFormLinks(AcceptanceTester $I)
+    public function clickloginFormLinks(AcceptanceTester $I)
     {
-
-
-        $I->amOnPage('/login');
+        $I->amGoingTo('Click Register');
         $I->click('Register');
+
         $I->expect('to go to the Register form');
         $I->seeCurrentUrlEquals('/register');
         $I->see('Register');
 
         $I->moveBack();// Moves back in history.
 
-        $I->seeLink('Forgot Password', 'forgot');
+        $I->amGoingTo('Click Forgot Password');
         $I->click('Forgot Password');
+
         $I->expect('to go to the Password Reset form');
         $I->seeCurrentUrlEquals('/forgot');
         $I->see('Password Reset');

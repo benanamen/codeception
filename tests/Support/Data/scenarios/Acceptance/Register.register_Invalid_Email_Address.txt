@@ -1,0 +1,9 @@
+I WANT TO REGISTER INVALID EMAIL ADDRESS
+
+I am on page '/register' 
+I am going to 'submit register form with an invalid email' 
+I expect 'to see red error message "Enter A Valid Email' 
+I see 'Enter A Valid Email'," '.danger' 
+I expect 'to see a red error message under the Email text field "Enter A Valid Email' 
+I see 'Enter A Valid Email'," '.invalid-feedback'
+

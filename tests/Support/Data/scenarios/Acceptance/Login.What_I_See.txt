@@ -1,0 +1,25 @@
+I WANT TO WHAT I SEE
+
+I am on page '/' 
+I click 'Login' 
+I see in title 'Perfect App Starter' 
+I expect 'to see a Url "/login' 
+I see current url equals '/login' 
+I expect 'to see a H3 title that says "Login' 
+I see 'Login'," 'H3' 
+I expect 'to see a label that says "Username' 
+I see element(locator::contains 'label'," 'Username')" 
+I see element 'label'," ['for' => 'username']" 
+I expect 'to see a label that says "Password' 
+I see element(locator::contains 'label'," 'Password')" 
+I see element 'label'," ['for' => 'password']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'password']" 
+I expect 'to see Login Button Link' 
+I see 'Login'," '.btn-primary' 
+I expect 'to see Register Button Link' 
+I see 'Register'," '.btn-secondary' 
+I expect 'to see Forgot Password Link' 
+I see 'Forgot Password'," '.btn-link' 
+I see link 'Forgot Password'," 'forgot'
+

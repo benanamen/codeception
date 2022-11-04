@@ -1,0 +1,42 @@
+I WANT TO WHAT I SEE
+
+I am on page '/' 
+I click 'Register' 
+I see in title 'Perfect App Starter' 
+I expect 'to see a Url "/register' 
+I see current url equals '/register' 
+I expect 'to see a H3 title that says "Register' 
+I see 'Register'," 'H3' 
+I expect 'to see a label that says "First Name' 
+I see element(locator::contains 'label'," 'First Name')" 
+I see element 'label'," ['for' => 'first_name']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'first_name']" 
+I expect 'to see a label that says "Last Name' 
+I see element(locator::contains 'label'," 'Last Name')" 
+I see element 'label'," ['for' => 'last_name']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'last_name']" 
+I expect 'to see a label that says "Email' 
+I see element(locator::contains 'label'," 'Email')" 
+I see element 'label'," ['for' => 'email']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'email']" 
+I expect 'to see a label that says "Username' 
+I see element(locator::contains 'label'," 'Username')" 
+I see element 'label'," ['for' => 'username']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'username']" 
+I expect 'to see a label that says "Password' 
+I see element(locator::contains 'label'," 'Password')" 
+I see element 'label'," ['for' => 'password']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'password']" 
+I expect 'to see a label that says "Confirm Password' 
+I see element(locator::contains 'label'," 'Confirm Password')" 
+I see element 'label'," ['for' => 'password_confirm']" 
+I expect 'to see a a form input' 
+I see element 'input'," ['name' => 'password_confirm']" 
+I expect 'to see Submit Button Link' 
+I see 'Submit'," '.btn-primary'
+

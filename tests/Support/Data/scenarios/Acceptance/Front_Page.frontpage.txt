@@ -1,4 +1,4 @@
-I WANT TO FRONTPAGE WORKS
+I WANT TO FRONTPAGE
 
 I am on page '/' 
 I see 'Login' 

@@ -1,0 +1,15 @@
+I WANT TO CLICKLOGIN FORM LINKS
+
+I am on page '/login' 
+I am going to 'Click Register' 
+I click 'Register' 
+I expect 'to go to the Register form' 
+I see current url equals '/register' 
+I see 'Register' 
+I move back "" 
+I am going to 'Click Forgot Password' 
+I click 'Forgot Password' 
+I expect 'to go to the Password Reset form' 
+I see current url equals '/forgot' 
+I see 'Password Reset'
+

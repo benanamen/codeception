@@ -1,0 +1,9 @@
+I WANT TO REGISTER MISMATCHED PASWORD AND P ASSWORD CONFIRM
+
+I am on page '/register' 
+I am going to 'submit register form with mis-matched password & password confirm' 
+I expect 'to see red error message "Enter A Valid Email' 
+I see 'Passwords Do Not Match'," '.danger' 
+I expect 'to see a red error message under the Email text field "Enter A Valid Email' 
+I see 'Passwords Do Not Match'," '.invalid-feedback'
+

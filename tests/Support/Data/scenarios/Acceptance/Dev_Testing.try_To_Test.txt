@@ -1,0 +1,10 @@
+I WANT TO TRY TO TEST
+
+I am on page '/forgot' 
+I see element 'label'," ['for' => 'inputResetPasswordEmail']" 
+I see element(locator::find 'label'," ['for' => 'inputResetPasswordEmail'])" 
+I see element(locator::contains 'label'," 'Email')" 
+I see element 'input'," ['required' => '']" 
+I see element 'input'," ['required' => 'required']" 
+I see element(locator::contains 'span'," 'Password reset instructions will be sent to this email address')"
+

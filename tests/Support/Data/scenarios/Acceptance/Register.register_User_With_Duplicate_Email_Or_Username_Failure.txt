@@ -1,0 +1,8 @@
+I WANT TO REGISTER USER WITH DUPLICATE EMAIL OR USERNAME FAILURE
+
+I am on page '/register' 
+I am going to 'submit register form with duplicate email and duplicate username data' 
+I expect 'to see a red error message "Registration Failed" & "Invalid Username or Email' 
+I see 'Registration Failed' 
+I see 'Invalid Username or Email'
+

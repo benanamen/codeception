@@ -1,8 +1,0 @@
-I WANT TO LOGIN FAILS
-
-I am on page '/' 
-I click 'Login' 
-I see in title 'Perfect App Starter' 
-I see current url equals '/login' 
-I see 'Invalid Login'
-
